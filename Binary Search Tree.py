@@ -76,15 +76,21 @@ class BST:
         dfs(self.root)
         return sum
 
+    # def build_from_sorted_array(self, nums):
+    #     self.root = self._build_from_sorted_array(nums)
+    #
+    # def _build_from_sorted_array(self, nums):
+    #     if not nums: return None
+    #     middle_index = len(nums) >> 1
+    #     root = node(nums[middle_index])
+    #     print(str(root.value))
+    #     root.left = self.build_from_sorted_array(nums[:middle_index])
+    #     root.right = self.build_from_sorted_array(nums[middle_index + 1:])
+    #     return root
+
+    def delete_tree(self):
+        pass
+
 bst = BST()
-bst.insert(4)
-bst.insert(7)
-bst.insert(1)
-bst.insert(8)
-bst.insert(5)
-bst.insert(4)
-bst.insert(8)
-bst.insert(5)
-bst.insert(4)
+bst.build_from_sorted_array([1,2,3,4,5,6,7,8,9,10,11,34,45,56,78,788])
 bst.print_tree()
-bst.print_reverse_tree()
